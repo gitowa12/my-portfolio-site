@@ -3,6 +3,7 @@ import { client } from "@/libs/client";
 
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   const { id } = params;
+  console.log("req", req);
 
   try {
     const res = await client.get({

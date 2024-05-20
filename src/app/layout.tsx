@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"max-w-[1200px] mx-auto px-6 font-NotoSansJP"}>
+      <body className={"max-w-[1248px] mx-auto px-6 font-NotoSansJP"}>
         <Header></Header>
         {children}
         <Footer></Footer>

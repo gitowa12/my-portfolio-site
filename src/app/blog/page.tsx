@@ -35,12 +35,25 @@ const Blog = async () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-[32px] mb-[64px]">
+      {/* <div className="flex flex-col justify-center items-center mt-[32px] mb-[64px]">
         <h2 className="text-[40px] font-bold mb-[32px]">Blog</h2>
         <div className="flex flex-col gap-y-[28px]">
           {blogs.map((item: Blog) => (
             <Card key={item.id} item={item} category="blog"></Card>
           ))}
+        </div>
+      </div> */}
+      <div className="  my-[32px] md:my-[48px] lg:my-[62px] ">
+        <div className="flex flex-col justify-center items-center ">
+          <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px]  md:mb-[48px] lg:text-[56px]">
+            Blog
+          </h2>
+
+          <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:flex-row md:flex-wrap md:justify-between">
+            {blogs.map((item: Blog) => (
+              <Card key={item.id} item={item} category="work"></Card>
+            ))}
+          </div>
         </div>
       </div>
     </>
