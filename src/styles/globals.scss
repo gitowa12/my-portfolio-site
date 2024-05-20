@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ブログ詳細のスタイル
+
+.blogContent {
+  h1 {
+    @apply text-[28px] md:text-[36px] font-bold mt-[16px] mb-[6px];
+  }
+  h2 {
+    @apply text-[24px] md:text-[28px] font-bold mt-[12px] mb-[4px] border-b;
+  }
+  h3 {
+    @apply text-[20px] md:text-[24px] font-bold mt-[12px] mb-[4px] border-b;
+  }
+}
