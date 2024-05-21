@@ -4,6 +4,8 @@ import { WorkItem } from "@/types/types";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
+const isBuild = process.env.NODE_ENV === "production" && typeof window === "undefined";
+
 // export async function GET() {
 //   try {
 //     const res = await client.get({
@@ -28,6 +30,10 @@ const Work = async () => {
 
   const res = await client.get({
     endpoint: "work",
+    // ...(isBuild ? {} : { customRequestInit: { cache: "no-store" } }),
+    customRequestInit: {
+      cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
+    },
   });
   const works = res.contents;
   console.log("works", works);

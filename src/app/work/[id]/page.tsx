@@ -21,8 +21,11 @@ const WorkItem = async ({ params }: Props) => {
   const res = await client.get({
     endpoint: "work",
     contentId: pageId,
+    customRequestInit: {
+      cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
+    },
   });
-  console.log("workItems", res);
+  console.log("workItem", res);
   const page = res;
 
   const formatedDate = formatDate(page.updatedAt);
@@ -34,7 +37,7 @@ const WorkItem = async ({ params }: Props) => {
           <h1 className="mb-[8px]">{page.title}</h1>
           <p className="text-[14px] text-[#666] p-[8px]">更新日{formatedDate}</p>
         </div>
-        <div>{parse(page.content)}</div>
+        <div>{page.content ? parse(page.content) : ""}</div>
       </div>
     </>
   );

@@ -10,10 +10,10 @@ const Blog = async () => {
   // console.log("blogs", blogs);
 
   const res = await client.get({
-    customRequestInit: {
-      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-    },
     endpoint: "blog",
+    customRequestInit: {
+      cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
+    },
   });
   // console.log("blog_res", res);
 

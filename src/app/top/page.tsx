@@ -19,19 +19,22 @@ const Top = async () => {
 
   //↓clientから直接使う場合。どっちにしてもキャッシュを使わせないようにオプションを書く必要がある。
   const res_works = await client.get({
-    customRequestInit: {
-      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-    },
+    // customRequestInit: {
+    //   cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+    // },
     endpoint: "work",
     queries: { limit: 2 },
+    customRequestInit: {
+      cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
+    },
   });
   const works = res_works.contents;
   console.log("top-work", works);
 
   const res_blogs = await client.get({
-    customRequestInit: {
-      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-    },
+    // customRequestInit: {
+    //   cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+    // },
     endpoint: "blog",
     queries: { limit: 2 },
   });
