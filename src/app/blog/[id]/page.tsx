@@ -8,11 +8,12 @@ type Props = {
     id: string;
   };
 };
+const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const BlogItem = async ({ params }: Props) => {
   const pageId = params.id;
 
-  const res = await fetch(`http://localhost:3000/api/blog/${pageId}`, { next: { revalidate: 0 } });
+  const res = await fetch(`${apiUrl}/api/blog/${pageId}`, { next: { revalidate: 0 } });
   console.log("res", res);
   const page = await res.json();
 

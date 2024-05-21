@@ -1,9 +1,10 @@
 import Card from "@/components/Card";
 import { client } from "@/libs/client";
 import { BlogItem } from "@/types/types";
+const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const Blog = async () => {
-  const res = await fetch("http://localhost:3000/api/blog", { next: { revalidate: 0 } });
+  const res = await fetch(`${apiUrl}/api/blog`, { next: { revalidate: 0 } });
   const data = await res.json();
   const blogs = data.contents;
   console.log("blogs", blogs);

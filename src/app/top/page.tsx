@@ -5,14 +5,16 @@ import { BlogItem, WorkItem } from "@/types/types";
 
 import { useEffect, useState } from "react";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 const Top = async () => {
   //Nextjsはfetchをキャッシュし続けるからrevalidateでキャッシュを使わないように指定する
-  const res_works = await fetch("http://localhost:3000/api/work/top", { next: { revalidate: 0 } });
+  const res_works = await fetch(`${apiUrl}/api/work/top`, { next: { revalidate: 0 } });
   const data_works = await res_works.json();
   const works = data_works.contents;
   console.log("top-works", works);
 
-  const res_blogs = await fetch("http://localhost:3000/api/blog/top", { next: { revalidate: 0 } });
+  const res_blogs = await fetch(`${apiUrl}/api/blog/top`, { next: { revalidate: 0 } });
   const data_blogs = await res_blogs.json();
   const blogs = data_blogs.contents;
   console.log("top-blogs", blogs);

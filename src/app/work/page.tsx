@@ -2,8 +2,10 @@ import Card from "@/components/Card";
 import { client } from "@/libs/client";
 import { WorkItem } from "@/types/types";
 
+const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 const Work = async () => {
-  const res = await fetch("http://localhost:3000/api/work", { next: { revalidate: 0 } });
+  const res = await fetch(`${apiUrl}/api/work`, { next: { revalidate: 0 } });
   const data = await res.json();
   const works = data.contents;
   console.log("works", works);
