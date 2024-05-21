@@ -11,7 +11,7 @@ const Footer = () => {
           </li>
           <li className="font-bold tracking-wide text-lg w-full text-center border-b h-[48px] flex items-center justify-center  md:border-b-0 md:border-t md:text-[20px] lg:text-[22px] md:h-[52px] lg:h-[60px]">
             {/* <a href="#work">Work</a> */}
-            <Link href="/Work">Work</Link>
+            <Link href="work">Work</Link>
           </li>
           <li className="font-bold tracking-wide text-lg w-full text-center border-b h-[48px] flex items-center justify-center  md:border-b-0 md:border-t md:text-[20px] lg:text-[22px] md:h-[52px] lg:h-[60px]">
             {/* <a href="#blog">Blog</a> */}
