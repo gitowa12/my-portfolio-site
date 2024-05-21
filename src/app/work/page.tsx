@@ -1,6 +1,6 @@
 import Card from "@/components/Card";
 import { client } from "@/libs/client";
-import { Work } from "@/types/types";
+import { WorkItem } from "@/types/types";
 
 const Work = async () => {
   const res = await fetch("http://localhost:3000/api/work", { next: { revalidate: 0 } });
@@ -30,7 +30,7 @@ const Work = async () => {
           Work
         </h2>
         <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
-          {works.map((item: Work) => (
+          {works.map((item: WorkItem) => (
             <Card key={item.id} item={item} category="work"></Card>
           ))}
         </div>

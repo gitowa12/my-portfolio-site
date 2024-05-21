@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import { client } from "@/libs/client";
-import { Blog, Work } from "@/types/types";
+import { BlogItem, WorkItem } from "@/types/types";
 
 import { useEffect, useState } from "react";
 
@@ -63,7 +63,7 @@ const Top = async () => {
           Work
         </h2>
         <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
-          {works.map((item: Work) => (
+          {works.map((item: WorkItem) => (
             <Card key={item.id} item={item} category="work"></Card>
           ))}
         </div>
@@ -75,7 +75,7 @@ const Top = async () => {
         </h2>
 
         <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
-          {blogs.map((item: Blog) => (
+          {blogs.map((item: BlogItem) => (
             <Card key={item.id} item={item} category="blog"></Card>
           ))}
         </div>

@@ -1,4 +1,4 @@
-export type Work = {
+export type WorkItem = {
   id: string;
   createdAt: string;
   updatedAt: string;
@@ -15,7 +15,7 @@ export type Work = {
   category: null;
 };
 
-export type Blog = {
+export type BlogItem = {
   id: string;
   createdAt: string;
   updatedAt: string;
