@@ -13,17 +13,18 @@ const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 const WorkItem = async ({ params }: Props) => {
   const pageId = params.id;
 
-  const res = await fetch(`${apiUrl}/api/work/${pageId}`, { next: { revalidate: 0 } });
-  console.log("res", res);
-  const page = await res.json();
-  console.log("page", page);
+  // const res = await fetch(`${apiUrl}/api/work/${pageId}`, { next: { revalidate: 0 } });
+  // console.log("res", res);
+  // const page = await res.json();
+  // console.log("page", page);
 
-  // const res = await client.get({
-  //   endpoint: "work",
-  //   contentId: pageId,
-  // });
-  // console.log("resres", res);
-  // const page = res;
+  const res = await client.get({
+    endpoint: "work",
+    contentId: pageId,
+  });
+  console.log("workItems", res);
+  const page = res;
+
   const formatedDate = formatDate(page.updatedAt);
   return (
     <>

@@ -4,17 +4,33 @@ import { WorkItem } from "@/types/types";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-const Work = async () => {
-  const res = await fetch(`${apiUrl}/api/work`, { next: { revalidate: 0 } });
-  const data = await res.json();
-  const works = data.contents;
-  console.log("works", works);
+// export async function GET() {
+//   try {
+//     const res = await client.get({
+//       customRequestInit: {
+//         cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+//       },
+//       endpoint: "work",
+//     });
+//     console.log("response", res);
+//     return res;
+//   } catch (error) {
+//     console.error("Error fetching data from Notion:", error);
+//     return;
+//   }
+// }
 
-  // const res = await client.get({
-  //   endpoint: "work",
-  // });
-  // const works = res.contents;
-  // console.log("top", works);
+const Work = async () => {
+  // const res = await fetch(`${apiUrl}/api/work`, { next: { revalidate: 0 } });
+  // const data = await res.json();
+  // const works = data.contents;
+  // console.log("works", works);
+
+  const res = await client.get({
+    endpoint: "work",
+  });
+  const works = res.contents;
+  console.log("works", works);
 
   return (
     <>

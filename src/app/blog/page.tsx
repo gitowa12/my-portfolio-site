@@ -4,20 +4,21 @@ import { BlogItem } from "@/types/types";
 const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 const Blog = async () => {
-  const res = await fetch(`${apiUrl}/api/blog`, { next: { revalidate: 0 } });
-  const data = await res.json();
-  const blogs = data.contents;
-  console.log("blogs", blogs);
+  // const res = await fetch(`${apiUrl}/api/blog`, { next: { revalidate: 0 } });
+  // const data = await res.json();
+  // const blogs = data.contents;
+  // console.log("blogs", blogs);
 
-  // const res = await client.get({
-  //   customRequestInit: {
-  //     cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-  //   },
-  //   endpoint: "blog",
-  // });
-  // console.log("response", res);
-  // const blogs = res.contents;
-  // return NextResponse.json(res);
+  const res = await client.get({
+    customRequestInit: {
+      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+    },
+    endpoint: "blog",
+  });
+  // console.log("blog_res", res);
+
+  const blogs = res.contents;
+  console.log("blogs", blogs);
 
   return (
     <>
