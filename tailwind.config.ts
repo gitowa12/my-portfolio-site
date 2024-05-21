@@ -13,6 +13,6 @@ const config: Config = {
       NotoSansJP: ["Noto Sans JP", "sans serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

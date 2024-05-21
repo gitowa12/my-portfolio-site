@@ -1,40 +1,9 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import { client } from "@/libs/client";
+import { Blog, Work } from "@/types/types";
 
 import { useEffect, useState } from "react";
-
-type Work = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAtstring: string;
-  title: string;
-  content: string;
-  eyecatch: {
-    url: string;
-    height: number;
-    width: number;
-  };
-  category: null;
-};
-
-type Blog = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAtstring: string;
-  title: string;
-  content: string;
-  eyecatch: {
-    url: string;
-    height: number;
-    width: number;
-  };
-  category: null;
-};
 
 const Top = async () => {
   //Nextjsはfetchをキャッシュし続けるからrevalidateでキャッシュを使わないように指定する
@@ -76,15 +45,15 @@ const Top = async () => {
         <div className="flex flex-col justify-center items-center md:flex-row">
           <img
             className="w-[120px] rounded-full bg-slate-200 mb-[16px] md:w-[160px] md:mr-[24px] md:mb-0"
-            src="/person.svg"
-            alt=""
+            src="/僕のアイコン画像400x400.jpg"
+            alt="icon"
           />
           <div className="flex flex-col items-center md:items-start">
             <p className="font-bold text-[20px] mb-[16px] md:text-[24px] md:mb-0">towa</p>
             <p className=" text-[18px] md:text-[20px] md:max-w-[480px] ">
               フロントエンドエンジニア。
               <br />
-              1999年生まれ。沖縄県出身、東京都在住。大学時代に上京し、新卒で入社した会社でフロントエンドエンジニアとし��のキャリアを孤独にスタートしました。
+              1999年生まれ。沖縄県出身、東京都在住。大学時代に上京し、新卒で入社した会社でフロントエンドエンジニアとしてのキャリアをスタート。JavaScriptとUIデザインが好き。
             </p>
           </div>
         </div>
@@ -107,7 +76,7 @@ const Top = async () => {
 
         <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
           {blogs.map((item: Blog) => (
-            <Card key={item.id} item={item} category="work"></Card>
+            <Card key={item.id} item={item} category="blog"></Card>
           ))}
         </div>
 

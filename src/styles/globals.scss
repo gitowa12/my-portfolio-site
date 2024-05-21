@@ -5,6 +5,14 @@
 
 // ブログ詳細のスタイル
 
+// デフォルトスタイルの削除を行わないクラス
+@layer base {
+  .no-reset {
+    all: unset;
+    display: revert;
+  }
+}
+
 .blogContent {
   h1 {
     @apply text-[28px] md:text-[36px] font-bold mt-[16px] mb-[6px];
@@ -14,5 +22,8 @@
   }
   h3 {
     @apply text-[20px] md:text-[24px] font-bold mt-[12px] mb-[4px] border-b;
+  }
+  li {
+    @apply list-inside;
   }
 }

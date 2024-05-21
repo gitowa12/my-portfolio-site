@@ -18,7 +18,7 @@ const HambugerMenu = () => {
       </button>
 
       <div
-        className={`backdrop-blur-lg fixed top-0 left-0 w-full h-full transition-opacity duration-200 ${
+        className={`bg-black/5 backdrop-blur-lg fixed z-50 top-0 left-0 w-full h-full transition-opacity duration-200 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

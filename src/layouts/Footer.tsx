@@ -18,7 +18,6 @@ const Footer = () => {
             <Link href="/blog">Blog</Link>
           </li>
           <li className="font-bold tracking-wide text-lg w-full text-center border-b h-[48px] flex items-center justify-center  md:border-b-0 md:border-t md:text-[20px] lg:text-[22px] md:h-[52px] lg:h-[60px]">
-            {/* <a href="#contact">Contact</a> */}
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -28,7 +27,7 @@ const Footer = () => {
           ©Towa
         </p>
         <div className="flex">
-          <a className="mr-[8px]" href="#">
+          <a className="mr-[8px]" href="https://x.com/towa97674795586">
             <img className="md:w-[22px] lg:w-[24px]" src="/x.svg" alt="" />
           </a>
           <a href="#">

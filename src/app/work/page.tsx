@@ -1,21 +1,6 @@
 import Card from "@/components/Card";
 import { client } from "@/libs/client";
-
-type Work = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAtstring: string;
-  title: string;
-  content: string;
-  eyecatch: {
-    url: string;
-    height: number;
-    width: number;
-  };
-  category: null;
-};
+import { Work } from "@/types/types";
 
 const Work = async () => {
   const res = await fetch("http://localhost:3000/api/work", { next: { revalidate: 0 } });
@@ -44,7 +29,7 @@ const Work = async () => {
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px] md:mb-[48px] lg:text-[56px]">
           Work
         </h2>
-        <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:flex-row md:flex-wrap md:justify-between">
+        <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
           {works.map((item: Work) => (
             <Card key={item.id} item={item} category="work"></Card>
           ))}
