@@ -21,9 +21,9 @@ const WorkItem = async ({ params }: Props) => {
   const res = await client.get({
     endpoint: "work",
     contentId: pageId,
-    customRequestInit: {
-      cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
-    },
+    // customRequestInit: {
+    //   cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
+    // },
   });
   console.log("workItem", res);
   const page = res;

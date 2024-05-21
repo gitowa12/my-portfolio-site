@@ -24,9 +24,9 @@ const Top = async () => {
     // },
     endpoint: "work",
     queries: { limit: 2 },
-    customRequestInit: {
-      cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
-    },
+    // customRequestInit: {
+    //   cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
+    // },
   });
   const works = res_works.contents;
   console.log("top-work", works);
@@ -37,6 +37,9 @@ const Top = async () => {
     // },
     endpoint: "blog",
     queries: { limit: 2 },
+    // customRequestInit: {
+    //   cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
+    // },
   });
   const blogs = res_blogs.contents;
   console.log("top-blog", blogs);

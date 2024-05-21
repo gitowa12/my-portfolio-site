@@ -23,9 +23,9 @@ const BlogItem = async ({ params }: Props) => {
     // },
     endpoint: "blog",
     contentId: pageId,
-    customRequestInit: {
-      cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
-    },
+    // customRequestInit: {
+    //   cache: "no-cache", // キャッシュを利用するけど、サーバーに再検証する
+    // },
   });
   console.log("blogItem_res", res);
   const page = res;

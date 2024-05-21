@@ -31,9 +31,9 @@ const Work = async () => {
   const res = await client.get({
     endpoint: "work",
     // ...(isBuild ? {} : { customRequestInit: { cache: "no-store" } }),
-    customRequestInit: {
-      cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
-    },
+    // customRequestInit: {
+    //   cache: "no-cache", // キャッシュを利用せずに常に新しいデータを取得する
+    // },
   });
   const works = res.contents;
   console.log("works", works);
