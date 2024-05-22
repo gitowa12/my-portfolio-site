@@ -6,7 +6,7 @@ type Props = {
 };
 
 const buttonStyle =
-  "text-center w-[30%] min-w-[120px] max-w-[260px] border-4 font-bold border-black  rounded-full py-[6px] transition shadow sm:text-[20px] sm:py-[8px] md:py-[8px] md:text-[24px] lg:py-[10px] lg:text-[28px]";
+  "text-center  min-w-[120px] max-w-[260px] border-4 font-bold border-black rounded-full   transition shadow text-[18px] px-[44px] py-[8px] md:text-[20px] md:px-[58px] lg:text-[24px] lg:px-[52px] ";
 
 const before =
   "before:absolute before:skew-x-[20deg]  before:bg-cyan-400 before:scale-110 before:w-full before:h-full before:top-0 before:-left-5 before:origin-top-left before:z-[-1] before:transition before:duration-300 before:scale-x-0 before:hover:scale-x-150";
