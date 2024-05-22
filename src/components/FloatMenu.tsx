@@ -81,22 +81,22 @@ const FloatMenu = () => {
             <div className="max-w-[340px] mx-auto">
               <nav>
                 <ul className=" flex flex-col justify-center items-center space-y-[4px]">
-                  <li className="font-semibold tracking-wide text-[36px] ">
+                  <li className="font-semibold tracking-wide text-[36px] underline-offset-4 hover:underline">
                     <Link href="/about" onClick={toggle}>
                       About
                     </Link>
                   </li>
-                  <li className="font-semibold tracking-wide text-[36px]">
+                  <li className="font-semibold tracking-wide text-[36px] underline-offset-4 hover:underline">
                     <Link href="/work" onClick={toggle}>
                       Work
                     </Link>
                   </li>
-                  <li className="font-semibold tracking-wide text-[36px]">
+                  <li className="font-semibold tracking-wide text-[36px] underline-offset-4 hover:underline">
                     <Link href="/blog" onClick={toggle}>
                       Blog
                     </Link>
                   </li>
-                  <li className="font-semibold tracking-wide text-[36px]">
+                  <li className="font-semibold tracking-wide text-[36px] underline-offset-4 hover:underline">
                     <Link href="/contact" onClick={toggle}>
                       Contact
                     </Link>
