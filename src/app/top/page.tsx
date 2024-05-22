@@ -46,7 +46,7 @@ const Top = async () => {
   console.log("top-blog", blogs);
 
   return (
-    <div className="flex flex-col gap-y-[64px] my-[32px] md:my-[48px] lg:my-[62px] md:gap-y-[80px] lg:gap-y-[100px]">
+    <div className="flex flex-col gap-y-[64px] my-[32px] md:my-[48px] lg:my-[62px] md:gap-y-[80px] lg:gap-y-[100px] ">
       <Profile></Profile>
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px] md:mb-[48px] lg:text-[56px]">
@@ -63,13 +63,11 @@ const Top = async () => {
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px]  md:mb-[48px] lg:text-[56px]">
           Blog
         </h2>
-
         <div className="flex flex-col justify-center gap-y-[32px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
           {blogs.map((item: BlogItem) => (
             <Card key={item.id} item={item} category="blog"></Card>
           ))}
         </div>
-
         <Button href="/blog"></Button>
       </div>
       <div></div>

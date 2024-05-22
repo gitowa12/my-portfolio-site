@@ -1,10 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const noscroll = (e: any) => {
+  e.preventDefault();
+};
 
 const HambugerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      // document.body.style.overflow = "hidden";
+      document.addEventListener("touchmove", noscroll, { passive: false });
+      document.addEventListener("wheel", noscroll, { passive: false });
+    } else {
+      // document.body.style.overflow = "auto";
+      document.removeEventListener("touchmove", noscroll);
+      document.removeEventListener("wheel", noscroll);
+    }
+  }, [isOpen]);
 
   const toggle = () => {
     console.log("動いてるよ");
@@ -14,11 +30,11 @@ const HambugerMenu = () => {
   return (
     <>
       <button className="hamburger-menu" onClick={toggle}>
-        <img src="/menu.svg" alt="メニュー" className="w-6 h-6" />
+        <img src="/menu.svg" alt="メニュー" className="size-7" />
       </button>
 
       <div
-        className={`bg-black/5 backdrop-blur-lg fixed z-50 top-0 left-0 w-full h-full transition-opacity duration-200 ${
+        className={`bg-black/5 backdrop-blur-lg fixed z-50 top-0 left-0 w-full h-full transition-all duration-200 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -29,7 +45,7 @@ const HambugerMenu = () => {
             </h1>
 
             <button className="hamburger-menu" onClick={toggle}>
-              <img src="/cancel-outline.svg" alt="メニュー" className="w-6 h-6" />
+              <img src="/cancel-outline.svg" alt="メニュー" className="size-7" />
             </button>
           </div>
           <div className="max-w-[340px] mx-auto">

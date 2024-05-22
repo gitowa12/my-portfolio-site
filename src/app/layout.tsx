@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
+import FloatMenu from "@/components/FloatMenu";
+import HambugerMenu from "@/components/HambugerMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={"max-w-[1248px] mx-auto px-6 font-NotoSansJP"}>
+        <div className={"fixed z-50 w-full h-full left-0 px-6 invisible"}>
+          <div className="relative w-full h-full  max-w-[1200px] mx-auto ">
+            <div className="absolute z-50 top-6 right-0">
+              <FloatMenu></FloatMenu>
+            </div>
+          </div>
+        </div>
         <Header></Header>
         {children}
         <Footer></Footer>
