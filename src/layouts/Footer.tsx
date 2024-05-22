@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/blog">Blog</Link>
           </li>
           <li className="font-bold tracking-wide text-lg w-full text-center border-b h-[48px] flex items-center justify-center  md:border-b-0 md:border-t md:text-[20px] lg:text-[22px] md:h-[52px] lg:h-[60px]">
-            <Link href="/contact">Contact</Link>
+            <Link href="https://x.com/towa97674795586">Contact</Link>
           </li>
         </ul>
       </nav>

@@ -41,7 +41,7 @@ const Header = () => {
               <li
                 className={`font-bold tracking-wide text-lg md:text-[20px] lg:text-[22px] relative ${before}`}
               >
-                <Link href="/contact">Contact</Link>
+                <Link href="https://x.com/towa97674795586">Contact</Link>
               </li>
             </ul>
           </nav>
