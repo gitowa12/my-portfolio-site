@@ -34,7 +34,7 @@ const Card = ({ item, category }: Props) => {
           </p>
           <div className="">
             <p className="text-[14px] lg:text-[18px] no-underline mb-1">{item.summary}</p>
-            <p className="text-[12px] lg:text-[14px] no-underline">更新日時 {formatedDate}</p>
+            <p className="text-[12px] lg:text-[14px] no-underline">更新日 {formatedDate}</p>
           </div>
         </div>
       </Link>
