@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={"max-w-[1248px] mx-auto px-6 font-NotoSansJP"}>
         <div className={"fixed z-50 w-full h-full left-0 px-6 invisible"}>
           <div className="relative w-full h-full  max-w-[1200px] mx-auto ">
-            <div className="absolute z-50 top-6 right-0">
+            <div className="invisible md:visible absolute z-50 top-6 right-0 ">
               <FloatMenu></FloatMenu>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Profile from "@/components/Profile";
+import SeparatorLine from "@/components/SeparatorLine";
 import { client } from "@/libs/client";
 import { BlogItem, WorkItem } from "@/types/types";
 
@@ -48,6 +49,7 @@ const Top = async () => {
   return (
     <div className="flex flex-col gap-y-[64px] my-[32px] md:my-[48px] lg:my-[62px] md:gap-y-[80px] lg:gap-y-[100px] ">
       <Profile></Profile>
+      <SeparatorLine></SeparatorLine>
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px] md:mb-[48px] lg:text-[56px]">
           Work
@@ -59,6 +61,7 @@ const Top = async () => {
         </div>
         <Button href="/work"></Button>
       </div>
+      <SeparatorLine></SeparatorLine>
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px]  md:mb-[48px] lg:text-[56px]">
           Blog

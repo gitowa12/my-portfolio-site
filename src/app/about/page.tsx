@@ -51,7 +51,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className="md:w-[48%]">
+            <div className="md:w-[48%] mb-[32px]">
               <p className="text-center font-bold text-[20px] sm:text-[24px]">資格</p>
               <ul className="flex flex-col space-y-[4px] sm:space-y-[6px]">
                 <li className="flex justify-between px-[6px]">
@@ -77,6 +77,7 @@ const About = () => {
               </ul>
             </div>
           </div>
+          <p className="text-[12px] tracking-wider">2024年5月時点の情報です。</p>
         </div>
       </div>
     </>
