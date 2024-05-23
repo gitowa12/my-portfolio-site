@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {},
     fontFamily: {
-      NotoSansJP: ["Noto Sans JP", "YuGothic", "sans-serif"],
+      NotoSansJP: ["Noto Sans JP", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography")],
