@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={"max-w-[1248px] mx-auto px-6 font-NotoSansJP"}>
+        {/* フロートボタンを設置するようにレイヤーを配置 */}
         <div className={"fixed z-50 w-full h-full left-0 px-6 invisible"}>
           <div className="relative w-full h-full  max-w-[1200px] mx-auto ">
             <div className="invisible md:visible absolute z-50 top-6 right-0 ">

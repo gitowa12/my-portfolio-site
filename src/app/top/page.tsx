@@ -54,7 +54,7 @@ const Top = async () => {
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px] md:mb-[48px] lg:text-[56px]">
           Work
         </h2>
-        <div className="flex flex-col justify-center gap-y-[32px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
+        <div className="w-full flex flex-col justify-center gap-y-[32px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
           {works.map((item: WorkItem) => (
             <Card key={item.id} item={item} category="work"></Card>
           ))}
@@ -66,7 +66,7 @@ const Top = async () => {
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px]  md:mb-[48px] lg:text-[56px]">
           Blog
         </h2>
-        <div className="flex flex-col justify-center gap-y-[32px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
+        <div className="w-full flex flex-col justify-center gap-y-[32px] mb-[32px] md:mb-[48px] md:flex-row md:justify-between">
           {blogs.map((item: BlogItem) => (
             <Card key={item.id} item={item} category="blog"></Card>
           ))}
