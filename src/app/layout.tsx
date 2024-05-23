@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_JP } from "next/font/google";
 import "../styles/globals.scss";
 import Header from "@/layouts/Header";
 import Footer from "@/layouts/Footer";
@@ -7,6 +7,12 @@ import FloatMenu from "@/components/FloatMenu";
 import HambugerMenu from "@/components/HambugerMenu";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const notojp = Noto_Sans_JP({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "My Porofolio Site",
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"max-w-[1248px] mx-auto px-6 font-NotoSansJP"}>
+      <body className={`max-w-[1248px] mx-auto px-6 ${notojp}`}>
         {/* フロートボタンを設置するようにレイヤーを配置 */}
         <div className={"fixed z-50 w-full h-full left-0 px-6 invisible"}>
           <div className="relative w-full h-full  max-w-[1200px] mx-auto ">
