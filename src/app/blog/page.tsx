@@ -30,13 +30,13 @@ const Blog = async () => {
           ))}
         </div>
       </div> */}
-      <div className="  my-[32px] md:my-[48px] lg:my-[62px] ">
+      <div className=" my-[32px] md:my-[48px] lg:my-[62px] ">
         <div className="flex flex-col justify-center items-center ">
           <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px]  md:mb-[48px] lg:text-[56px]">
             Blog
           </h2>
 
-          <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
+          <div className="flex flex-col justify-center w-full gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
             {blogs.map((item: BlogItem) => (
               <Card key={item.id} item={item} category="blog"></Card>
             ))}

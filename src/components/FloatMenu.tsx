@@ -53,7 +53,7 @@ const FloatMenu = () => {
     <>
       <div className="hidden md:block">
         <button
-          className={`relative  backdrop-blur z-50 border-4 border-black 0 rounded-full p-2 transition-all duration-200  ${
+          className={`relative  backdrop-blur z-50 border-4 border-black 0 rounded-full p-2 transition-all duration-300  ${
             isShow ? "opacity-100 visible " : "opacity-0 invisible "
           } overflow-hidden ${buttonBefore}`}
           onClick={toggle}
@@ -62,7 +62,7 @@ const FloatMenu = () => {
         </button>
 
         <div
-          className={`bg-black/5 backdrop-blur-lg fixed z-[100] top-0 left-0 w-full h-full mx-auto  transition-all duration-200 ${
+          className={`bg-black/5 backdrop-blur-lg fixed z-[100] top-0 left-0 w-full h-full mx-auto  transition-all duration-300 ${
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >

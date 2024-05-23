@@ -53,7 +53,7 @@ const Work = async () => {
         <h2 className="text-[40px] font-bold mb-[32px] md:text-[48px] md:mb-[48px] lg:text-[56px]">
           Work
         </h2>
-        <div className="flex flex-col justify-center gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
+        <div className="flex flex-col justify-center w-full gap-y-[24px] mb-[32px] md:mb-[48px] md:gap-y-[40px] md:flex-row md:flex-wrap md:justify-between">
           {works.map((item: WorkItem) => (
             <Card key={item.id} item={item} category="work"></Card>
           ))}
