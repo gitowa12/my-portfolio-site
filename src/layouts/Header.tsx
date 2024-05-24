@@ -10,7 +10,7 @@ const logo_before =
 const Header = () => {
   return (
     <>
-      <header className="h-14 flex justify-between items-center md:h-16">
+      <header className="h-10 flex justify-between items-center md:h-12">
         <h1
           className={`font-bold tracking-widest text-xl transition  duration-100 md:text-[20px] lg:text-[22px] relative`}
         >
@@ -24,22 +24,22 @@ const Header = () => {
           <nav>
             <ul className="flex space-x-4 md:space-x-6">
               <li
-                className={`font-bold tracking-wide text-lg md:text-[20px] lg:text-[22px] relative ${before}`}
+                className={`font-bold tracking-wide text-lg md:text-[18px] lg:text-[20px] relative ${before}`}
               >
                 <Link href="/about">About</Link>
               </li>
               <li
-                className={`font-bold tracking-wide text-lg md:text-[20px] lg:text-[22px] relative ${before}`}
+                className={`font-bold tracking-wide text-lg md:text-[18px] lg:text-[20px] relative ${before}`}
               >
                 <Link href="/work">Work</Link>
               </li>
               <li
-                className={`font-bold tracking-wide text-lg md:text-[20px] lg:text-[22px] relative ${before}`}
+                className={`font-bold tracking-wide text-lg md:text-[18px] lg:text-[20px] relative ${before}`}
               >
                 <Link href="/blog">Blog</Link>
               </li>
               <li
-                className={`font-bold tracking-wide text-lg md:text-[20px] lg:text-[22px] relative ${before}`}
+                className={`font-bold tracking-wide text-lg md:text-[18px] lg:text-[20px] relative ${before}`}
               >
                 <Link href="https://x.com/towa97674795586">Contact</Link>
               </li>
