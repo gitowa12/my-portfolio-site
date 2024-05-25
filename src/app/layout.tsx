@@ -9,7 +9,7 @@ import HambugerMenu from "@/components/HambugerMenu";
 const inter = Inter({ subsets: ["latin"] });
 
 const notojp = Noto_Sans_JP({
-  weight: ["400", "500"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   display: "swap",
 });

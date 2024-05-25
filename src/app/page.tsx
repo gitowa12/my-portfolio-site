@@ -3,7 +3,7 @@ import Top from "./top/page";
 
 export default function Home() {
   return (
-    <div className="max-w-[1248px] mx-auto ">
+    <div className="max-w-[1248px] mx-auto">
       <Top></Top>
     </div>
   );
